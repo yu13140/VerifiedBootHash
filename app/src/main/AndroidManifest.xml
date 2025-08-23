@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Removed unused dynamic receiver permission cleanup -->
+
+    <application
+        android:enableOnBackInvokedCallback="true"
+        android:hasFragileUserData="true"
+    android:label="GetVBHash"
+    android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
+        tools:targetApi="33">
+    <!-- Headless: no launcher activity -->
+
+        <receiver
+            android:name=".MainReceiver"
+            android:exported="true"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="io.github.xtrlumen.vbmeta.ACTION_RUN_HASH" />
+            </intent-filter>
+        </receiver>
+
+    <!-- Removed unused androidx-startup/profileinstaller cleanup and Samsung keystore utils -->
+    </application>
+
+</manifest>
