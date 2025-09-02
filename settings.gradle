@@ -22,5 +22,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "GetVBHash"
+rootProject.name = "VerifiedBootHash"
 include(":app")

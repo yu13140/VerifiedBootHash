@@ -24,12 +24,12 @@ if (local.exists()) {
 android {
     compileSdk = 35
     buildToolsVersion = '35.0.1'
-    namespace = 'io.github.xtrlumen.vbmeta'
+    namespace = 'com.yu13140.verifiedboothash'
     defaultConfig {
         minSdk = 24
         targetSdk = 35
-        versionCode = 100
-        versionName = '1.0'
+        versionCode = gitCommitCount
+        versionName = "1.0.${gitCommitCount}"
     resourceConfigurations = ['en']
         optimization {
             keepRules {
@@ -110,6 +110,7 @@ configurations.configureEach {
 }
 
 dependencies {
+    implementation 'androidx.core:core-ktx:1.13.1'
     implementation 'org.bouncycastle:bcprov-jdk18on:1.80'
 }
 
